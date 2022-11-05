@@ -35,7 +35,6 @@ function getUserInfo() {
 
             // 渲染用户的头像函数renderAvatar
             renderAvatar(res.data);
-            console.log(res);
         }
     });
 }
@@ -49,7 +48,7 @@ function renderAvatar(user) {
     if (user.user_pic !== null) {
         // 渲染图片头像
         $('.text-avatar').hide();
-        $('.layui-nav-img').attr('src', 'user.user_pic').show();
+        $('.layui-nav-img').attr('src', user.user_pic).show();
     } else {
         // 渲染文字头像
         $('.layui-nav-img').hide();
